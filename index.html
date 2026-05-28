@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPrato - Guia do Consumidor Consciente</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <nav>
+        <div class="logo">EcoPrato 🌿</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('simulador')">Simulador</a></li>
+            <li>.</li>
+            <li><a href="#" onclick="showSection('sobre-mim')">Sobre Mim</a></li>
+            <li>.</li>
+            <li><a href="#" onclick="showSection('agrinho')">Agrinho 2026</a></li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="simulador" class="active">
+            <h1>Calculadora de Pegada Ambiental</h1>
+            <p>Descubra o impacto do transporte do seu alimento (Campo -> Cidade).</p>
+            
+            <div class="calculator-card">
+                <label for="alimento">O que você comeu?</label>
+                <select id="alimento">
+                    <option value="5">Maçã Local (Sazonal)</option>
+                    <option value="500">Tomate de outra região</option>
+                    <option value="12000">Fruta Importada (Avião)</option>
+                </select>
+
+                <label for="km">Distância aproximada (km):</label>
+                <input type="number" id="km" placeholder="Ex: 50">
+
+                <button onclick="calcularPegada()">Calcular Impacto</button>
+
+                <div id="resultado" class="result-box"></div>
+            </div>
+        </section>
+
+        <section id="sobre-mim">
+            <h1>Sobre o Autor</h1>
+            <div class="profile">
+                <p>Olá! Sou aluno do 1º ano do Ensino Médio e desenvolvi este projeto para conectar a tecnologia com a sustentabilidade no campo.</p>
+                <p>Acredito que a informação é a ferramenta mais forte para transformar nossos hábitos de consumo.</p>
+            </div>
+        </section>
+
+        <section id="agrinho">
+            <h1>Projeto Agrinho 2026</h1>
+            <p>Tema: <strong>Agro e Meio Ambiente</strong></p>
+            <p>O Programa Agrinho é uma iniciativa que busca levar educação de qualidade e consciência ambiental para as escolas, integrando o saber rural e urbano.</p>
+            <div class="info-box">
+                <p>Este site faz parte da categoria "Programação/Tecnologia" e visa reduzir a pegada de carbono através do incentivo ao consumo local.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
